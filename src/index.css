@@ -1,0 +1,20 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* diameter of the circle */
+  --diameter: 2px;
+  --gap: 2rem;
+  --color: hsl(0, 0%, 80%);
+
+  background: radial-gradient(
+      circle at var(--diameter) var(--diameter),
+      var(--color) calc(var(--diameter) - 1px),
+      transparent var(--diameter)
+    )
+    0 0 / var(--gap) var(--gap);
+}

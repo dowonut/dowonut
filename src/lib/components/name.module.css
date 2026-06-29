@@ -1,0 +1,13 @@
+.title {
+  cursor: pointer;
+  user-select: none;
+  font-size: 8rem;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: 6rem;
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: 5rem;
+  }
+}

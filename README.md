@@ -1,1 +1,3 @@
-[![dowonut's GitHub stats](https://github-readme-stats.vercel.app/api?username=dowonut&show_icons=true&theme=monokai)](https://github.com/anuraghazra/github-readme-stats)
+hi, im linus / dowonut
+
+https://linusguy.com/

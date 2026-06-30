@@ -1,0 +1,10 @@
+.button {
+  & svg {
+    width: 1.5rem;
+    height: auto;
+
+    & path {
+      fill: var(--mantine-color-default-color);
+    }
+  }
+}

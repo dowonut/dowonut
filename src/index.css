@@ -1,3 +1,26 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+
+  /* outline: 1px solid red; */
+}
+
+/* :root {
+  @mixin light-root {
+    --mantine-color-body: red;
+  }
+
+  @mixin dark-root {
+    --mantine-color-body: red;
+  }
+} */
+
 #root {
   width: 100vw;
   height: 100vh;
@@ -5,16 +28,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: var(--mantine-spacing-md);
 
   /* diameter of the circle */
   --diameter: 2px;
-  --gap: 2rem;
-  --color: hsl(0, 0%, 80%);
+  --gap: var(--mantine-spacing-lg);
+  --color: light-dark(hsl(0, 0%, 80%), hsl(0, 0%, 25%));
 
+  animation: 5s glide linear infinite;
   background: radial-gradient(
       circle at var(--diameter) var(--diameter),
       var(--color) calc(var(--diameter) - 1px),
       transparent var(--diameter)
     )
-    0 0 / var(--gap) var(--gap);
+    var(--offset) var(--offset) / var(--gap) var(--gap);
+}
+
+@property --offset {
+  syntax: "<length>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes glide {
+  to {
+    --offset: 2rem;
+  }
 }

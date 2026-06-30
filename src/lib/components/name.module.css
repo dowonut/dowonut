@@ -2,12 +2,22 @@
   cursor: pointer;
   user-select: none;
   font-size: 8rem;
+  /* font-weight: lighter; */
 
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: 6rem;
   }
 
   @media (max-width: $mantine-breakpoint-xs) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
+
+  @media (max-width: 25em) {
+    font-size: 3rem;
+  }
+}
+
+.highlight {
+  color: var(--mantine-color-red-filled);
+  font-weight: bold;
 }
